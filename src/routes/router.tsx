@@ -1,20 +1,21 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import App from "../App";
-import Error404 from "../components/Error404";
-import Intro from "./Intro";
+import Career from "./Career";
+import Introduce from "./Introduce";
+import TechStacks from "./TechStacks";
 
 const router = createBrowserRouter([
   {
     path: "",
     element: <App />,
-    errorElement: <Error404 />,
     children: [
-      {
-        path: "/intro",
-        element: <Intro />,
-      },
+      { path: "/introduce", element: <Introduce /> },
+      { path: "/tech-stacks", element: <TechStacks /> },
+      { path: "/career", element: <Career /> },
+      { path: "", element: <Introduce /> },
     ],
   },
+  { path: "*", element: <Navigate to="/" /> },
 ]);
 
 export default router;
