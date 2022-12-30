@@ -8,11 +8,15 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 300;
     font-family: 'Source Sans Pro', sans-serif;
     background-color: ${(props) => props.theme.Background};
+    color: ${(props) => props.theme.WhiteBlackColor};
     line-height: 1.2;
-    overflow-x: hidden;
   }
   a {
-    text-decoration:none;
-    color:inherit;
+    text-decoration: none;
+    color: ${(props) => props.theme.LinksColor};
+    &:hover {
+      cursor: pointer;
+      color: ${(props) => props.theme.FunctionsColor};
+    }
   }
 `;
