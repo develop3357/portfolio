@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import MoengPhoto from "../images/just-cat.jpeg";
 
 const Wrapper = styled.header`
   display: flex;
@@ -24,8 +25,10 @@ const Photo = styled.div`
   width: 120px;
   height: 120px;
   border-radius: 60px;
-  background-color: white;
   margin-bottom: 15px;
+  background-image: url(${MoengPhoto});
+  background-size: 110%;
+  background-position: center;
 `;
 
 const Description = styled.div``;
@@ -42,7 +45,11 @@ function Header() {
     <Wrapper>
       <Character>
         <Photo />
-        <Description>I am a cat</Description>
+        <Description>
+          풀스택 개발자
+          <br />
+          사진은 그냥 고양이
+        </Description>
       </Character>
       <Item>
         <Link to="/introduce">Introduce</Link>
