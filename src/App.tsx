@@ -13,7 +13,6 @@ const Wrapper = styled.div`
 
   article {
     margin-left: 25vw;
-    padding: 15px;
   }
 `;
 

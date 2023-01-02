@@ -3,6 +3,7 @@ import TechStacksCardHolder from "../components/TechStacksCardHolder";
 import tech from "../models/TechModel";
 
 const Article = styled.article`
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
