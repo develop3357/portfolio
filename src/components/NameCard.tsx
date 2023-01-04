@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import ExternalLink from "../components/ExternalLink";
-import CatPhoto from "../images/name-card-photo.jpeg";
 import { INameCardModel } from "../models/NameCardModel";
 
 const Wrapper = styled.div`
@@ -10,7 +9,7 @@ const Wrapper = styled.div`
   border-radius: 10px;
   padding: 35px 25px 20px;
   box-shadow: 5px 5px 15px 5px ${(props) => props.theme.SelectionBackground};
-  width: 480px;
+  max-width: 480px;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -48,7 +47,9 @@ const InfoUl = styled.ul`
 
 const InfoLi = styled.li``;
 
-const Message = styled.div``;
+const Message = styled.div`
+  line-height: 1.3;
+`;
 
 const Links = styled.div`
   display: flex;
@@ -64,7 +65,7 @@ function NameCard({ nameCard }: INameCardProps) {
   return (
     <Wrapper>
       <Top>
-        <Photo imageUrl={CatPhoto} />
+        <Photo imageUrl={nameCard.photo} />
         <InfoUl>
           {nameCard.infos.map((info, index) => (
             <InfoLi key={index}>{info}</InfoLi>
